@@ -12,6 +12,7 @@ let session = require('express-session')
 let cloudinary = require('cloudinary')
 let multer = require('multer')
 let upload = multer({dest: './uploads/'})
+let methodOverride = require('method-override')
 
 //Create an express instance
 let app = express();
@@ -35,7 +36,7 @@ app.use(express.static('static'))
 // decrypt the variables coming in via POST routes (from forms)
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
-
+app.use(methodOverride("_method"))
 // Set up sessions 
 app.use(session({
     secret: process.env.SESSION_SECRET,
@@ -70,6 +71,7 @@ app.post('/', upload.single('myFile'), (req, res) => {
 app.use('/auth', require('./controllers/auth'))
 app.use('/profile', require('./controllers/profile'))
 app.use('/feed', require('./controllers/feed'))
+app.use('/faves', require('./controllers/faves'))
 
 //create a home route
 app.get('/', (req, res) => {

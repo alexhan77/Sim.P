@@ -1,15 +1,22 @@
-<h1>hi hi hi </h1>
+<h1>Sim.p's Feed Page </h1>
 
 
 <% feed.forEach(f => { %>
 
 <div class="row">
     <div class="col s6">
-        <img src="<%=f.pic%>">
+        <p>USERNAME: <%=f.user.username %> </p>
+        <img src="<%=f.pic%>"id="profilepic">
+        <form method="POST" action="/faves/results">
+            <input type="hidden" name="userId" value="<%= f.userId %>">
+            <button type="submit">💜</button>
+        </form>    
     </div>
     <div class="col s6">
+        <p>Comment section:</p>
         <h2><%=f.content%></h2>
     </div>
 </div>
 
 <% }) %>
+<a href="/profile/user" class="waves-effect waves-light btn"><i class="material-icons right">cloud</i> Back to ur Sim.P profile</a>

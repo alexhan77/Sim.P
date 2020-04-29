@@ -43,7 +43,7 @@ router.post('/signup', (req, res, next) => {
                 // Good -this was expected, they are a properly new user
                 // AUTO-LOGIN with passport
                 passport.authenticate('local', {
-                    successFlash: 'Successful Login - Welcome Brah!',
+                    successFlash: 'Successful Login - Welcome Back!',
                     successRedirect: '/profile/user',
                     failureFlash: 'Invalid Credentials',
                     failureRedirect: '/auth/login'

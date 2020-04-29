@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faves</title>
+</head>
+
+<body>
+    <h1>Your Faves!</h1>
+    <% if(favPics.length) { %>
+        <% favPics.forEach(m => { %>
+            <!-- probably putting the user.id in here -->
+            <hr>
+    <% }) %>
+    <% } else { %>
+        <h2>You have no favorites!</h2>
+    <% } %>
+    <a href= "/profile/user">
+        <button>
+        &larr; Back Home
+        </button>
+    </a>
+</body>
+</html>
