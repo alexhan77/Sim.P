@@ -2,12 +2,16 @@ const router = require('express').Router()
 const db = require('../models')
 
 router.get('/', (req, res) => {
-    db.faves.findAll()
+    db.faves.findAll({
+        include: [db.feed,db.user],
+
+    })
     .then(favPics => {
+        console.log(favPics[0].feed)
         res.render('faves/results', { favPics })
     })
     .catch(err => {
-        console.log('Error')
+        console.log('Error', err)
         res.send('uh oh!')
     })
 })

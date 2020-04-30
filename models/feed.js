@@ -8,6 +8,7 @@ module.exports = (sequelize, DataTypes) => {
   feed.associate = function(models) {
     // associations can be defined here
     models.feed.belongsTo(models.user)
+    models.feed.hasMany(models.faves)
   };
   return feed;
 };

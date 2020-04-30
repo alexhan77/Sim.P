@@ -9,6 +9,7 @@
         <img src="<%=f.pic%>"id="profilepic">
         <form method="POST" action="/faves/results">
             <input type="hidden" name="userId" value="<%= f.userId %>">
+            <input type="hidden" name="feedId" value="<%= f.id %>">
             <button type="submit">💜</button>
         </form>    
     </div>

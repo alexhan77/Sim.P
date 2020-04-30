@@ -12,6 +12,8 @@
     <% if(favPics.length) { %>
         <% favPics.forEach(m => { %>
             <!-- probably putting the user.id in here -->
+            <div>Username: <%= m.user.username %></div>
+            <img src="<%= m.feed.pic %>">
             <hr>
     <% }) %>
     <% } else { %>
