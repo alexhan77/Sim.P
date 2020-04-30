@@ -7,7 +7,7 @@ body {
     background-size: cover;
     height: auto;
     max-width: 100%;
-    text-align: left;
+    text-align: center;
     color: black;
 }
 
@@ -21,14 +21,19 @@ body {
     flex: 1 0 auto;
   }
       
-  /* #profilepic {
-    height: 250px;
-    width: 250px;
-  } */
+  #profilepic {
+    max-height: 300px;
+    width: auto;
+    background-size: cover;
+    margin: 0 auto;
+  }
 
   #feedpic {
     height: 250px;
     width: 250px;
   }
 
+  #brand-logo {
+    background-image: url("https://res.cloudinary.com/jummay/image/upload/v1588269730/724e16aa-cb1a-46be-90d3-6d661d73d764_200x200_f25mgw.png");
+  }
   

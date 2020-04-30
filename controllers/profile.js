@@ -38,4 +38,20 @@ router.get('/admin', adminLogin, (req, res) => {
     })
 })
 
+// PUT ROUTES -editting the profile page
+router.put('/:id', (req, res) => {
+    console.log('REQUEST BODY', req.body)
+    db.user.update(
+        req.body,
+        { where: { id: req.params.id } }
+    )
+    .then(() => {
+        res.redirect('/user/' + req.params.id)
+    })
+    .catch(err => {
+        console.log(err)
+        res.render('error')
+    })
+})
+
 module.exports  = router

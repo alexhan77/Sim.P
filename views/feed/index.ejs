@@ -1,19 +1,19 @@
 
-<div class="container">
+<div class="container center-align">
 <h1>Sim.p's Feed Page </h1>
 
 
-<% feed.forEach(f => { %>
 <div class="row">
+<% feed.forEach(f => { %>
     <div class="col s12 m4">
         <div class="card">
             <div class="card-image">
                 <img src="<%=f.pic%>"id="profilepic">
             </div>
-            <span class="card-title">USERNAME: <%=f.user.username %> </span>
+            <span class="card-title">Post Created By: <%=f.user.username %> </span>
             
             <div class="card-content">
-                <p><%=f.content%></p>
+                <p>Caption: <%=f.content%></p>
             </div>
             <div class="card-action">
                 <form method="POST" action="/faves/results">
@@ -24,8 +24,8 @@
             </div>
         </div>
     </div>
+    <% }) %>
 </div>
-<a href="/profile/user" class="waves-effect waves-light btn"><i class="material-icons right">cloud</i> Back to ur Sim.p profile</a>
-<% }) %>
 
+<a href="/profile/user" class="waves-effect waves-light btn"><i class="material-icons right">cloud</i> Back to ur Sim.p profile</a>
 </div>
