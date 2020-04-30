@@ -1,0 +1,38 @@
+<h1>EDIT UR SIMP PAGE</h1>
+<p></p>
+
+<div class="container">
+    <form class="col s12" method="POST" action="/profile/edit/<%= user.id %>?_method=PUT">
+        <div class="row">
+            <div class="input-field col s6">
+                <input id="first_name" type="text" name="firstname" value="<%=user.firstname%>">
+                <label for="first_name">First Name</label>
+            </div>
+            <div class="input-field col s6">
+                <input id="last_name" type="text" name="lastname" value="<%=user.lastname%>">
+                <label for="last_name">Last Name</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s3">
+                <input id="username" name="username" type="text" value="<%=user.username%>">
+                <label for="username">Display Username</label>
+            </div>
+    </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="pic" type="url" name="pic" value="<%=user.pic%>">
+                <label for="pic">Picture URL</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea id="bio" name="bio" class="materialize-textarea"><%= user.bio %></textarea>
+                <label for="bio">Bio</label>
+            </div>
+        </div>
+        <button class="btn waves-effect waves-light indigo lighten-3" type="submit">Done
+            <i class="material-icons right">send</i>
+        </button>
+        </form>
+</div>
