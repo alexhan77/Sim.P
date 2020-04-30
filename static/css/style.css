@@ -2,7 +2,7 @@ html,
 body {
     margin: 0;
     padding: 0;
-    background-image: url("https://wallpaperaccess.com/full/149320.jpg");
+    background-image: url("https://cdn.wallpaperhi.com/1024x768/20120605/death%20note%20l%20white%20background%201024x768%20wallpaper_www.wallpaperhi.com_11.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     height: auto;
@@ -21,7 +21,14 @@ body {
     flex: 1 0 auto;
   }
       
-  #profilepic {
+  /* #profilepic {
+    height: 250px;
+    width: 250px;
+  } */
+
+  #feedpic {
     height: 250px;
     width: 250px;
   }
+
+  

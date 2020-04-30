@@ -31,4 +31,18 @@ router.post('/results', (req, res) => {
     })
 })
 
+router.delete('/results/:id', (req, res)=> {
+    console.log('Yo', req.params.id)
+    db.faves.destroy({
+        where: {id: req.params.id}
+    })
+    .then(() => {
+        res.redirect('/feed')
+    })
+    .catch(err=> {
+        console.log('Error in delete', err)
+        res.render('error')
+    })
+})
+
 module.exports = router

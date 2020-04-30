@@ -1,23 +1,31 @@
+
+<div class="container">
 <h1>Sim.p's Feed Page </h1>
 
 
 <% feed.forEach(f => { %>
-
 <div class="row">
-    <div class="col s6">
-        <p>USERNAME: <%=f.user.username %> </p>
-        <img src="<%=f.pic%>"id="profilepic">
-        <form method="POST" action="/faves/results">
-            <input type="hidden" name="userId" value="<%= f.userId %>">
-            <input type="hidden" name="feedId" value="<%= f.id %>">
-            <button type="submit">💜</button>
-        </form>    
-    </div>
-    <div class="col s6">
-        <p>Comment section:</p>
-        <h2><%=f.content%></h2>
+    <div class="col s12 m4">
+        <div class="card">
+            <div class="card-image">
+                <img src="<%=f.pic%>"id="profilepic">
+            </div>
+            <span class="card-title">USERNAME: <%=f.user.username %> </span>
+            
+            <div class="card-content">
+                <p><%=f.content%></p>
+            </div>
+            <div class="card-action">
+                <form method="POST" action="/faves/results">
+                    <input type="hidden" name="userId" value="<%= f.userId %>">
+                    <input type="hidden" name="feedId" value="<%= f.id %>">
+                    <button type="submit">💜</button>
+                </form> 
+            </div>
+        </div>
     </div>
 </div>
-
+<a href="/profile/user" class="waves-effect waves-light btn"><i class="material-icons right">cloud</i> Back to ur Sim.p profile</a>
 <% }) %>
-<a href="/profile/user" class="waves-effect waves-light btn"><i class="material-icons right">cloud</i> Back to ur Sim.P profile</a>
+
+</div>

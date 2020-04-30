@@ -9,11 +9,15 @@
 
 <body>
     <h1>Your Faves!</h1>
+
     <% if(favPics.length) { %>
         <% favPics.forEach(m => { %>
             <!-- probably putting the user.id in here -->
             <div>Username: <%= m.user.username %></div>
-            <img src="<%= m.feed.pic %>">
+            <img src="<%= m.feed.pic %>" alt="feedpic">
+            <form method="DELETE" action="/faves/results/<%= m.id %>">
+                <button type="submit">DELETE<%= m.id %></button>
+            </form> 
             <hr>
     <% }) %>
     <% } else { %>
@@ -26,3 +30,4 @@
     </a>
 </body>
 </html>
+
