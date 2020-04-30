@@ -6,15 +6,16 @@
             <li>
                 <a href="/">Home</a>
             </li>
+           
+            <% if (user) { %>
+            <li>
+                <a href="/profile/user">Profile Page</a>
+            </li>
             <li>
                 <a href="/feed">Feed Page</a>
             </li>
             <li>
                 <a href="/faves">Your Faves</a>
-            </li>
-            <% if (user) { %>
-            <li>
-                <a href="/profile/user">Profile Page</a>
             </li>
             <% if (user.admin) { %>
                 <li>
@@ -44,6 +45,12 @@
     <a href="/">Home</a>
     </li>
         <a href="/profile/user">Profile Page</a>
+    </li>
+    <li>
+        <a href="/feed">Feed Page</a>
+    </li>
+    <li>
+        <a href="/faves">Your Faves</a>
     </li>
     <li>
         <a href="/auth/logout">Logout</a>

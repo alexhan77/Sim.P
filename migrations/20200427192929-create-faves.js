@@ -14,6 +14,9 @@ module.exports = {
       feedId: {
         type: Sequelize.INTEGER
       },
+      currentId: {
+        type: Sequelize.INTEGER
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

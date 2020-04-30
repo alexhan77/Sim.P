@@ -8,6 +8,7 @@ router.get('/', (req, res) => {
     })
     .then(favPics => {
         console.log(favPics[0].feed)
+        // console.log(user.id)
         res.render('faves/results', { favPics })
     })
     .catch(err => {
