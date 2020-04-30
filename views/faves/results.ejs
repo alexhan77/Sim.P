@@ -15,8 +15,9 @@
             <!-- probably putting the user.id in here -->
             <div>Username: <%= m.user.username %></div>
             <img src="<%= m.feed.pic %>" alt="feedpic">
-            <form method="DELETE" action="/faves/results/<%= m.id %>">
-                <button type="submit">DELETE<%= m.id %></button>
+            <form method="POST" action="/faves/results/<%= m.id %>?_method=DELETE">
+                <input type="hidden" name="_method" value="DELETE">
+                <button type="submit">DELETE</button>
             </form> 
             <hr>
     <% }) %>

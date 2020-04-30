@@ -7,7 +7,6 @@ router.get('/', (req, res) => {
 
     })
     .then(favPics => {
-        console.log(favPics[0].feed)
         // console.log(user.id)
         res.render('faves/results', { favPics })
     })
@@ -37,7 +36,7 @@ router.delete('/results/:id', (req, res)=> {
         where: {id: req.params.id}
     })
     .then(() => {
-        res.redirect('/feed')
+        res.redirect('/faves')
     })
     .catch(err=> {
         console.log('Error in delete', err)
