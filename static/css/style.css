@@ -33,7 +33,7 @@ body {
     width: 250px;
   }
 
-  #brand-logo {
-    background-image: url("https://res.cloudinary.com/jummay/image/upload/v1588269730/724e16aa-cb1a-46be-90d3-6d661d73d764_200x200_f25mgw.png");
+  .brand-logo {
+    display: center;
   }
   

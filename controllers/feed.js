@@ -1,5 +1,6 @@
 let router = require('express').Router()
 let db = require('../models')
+router.use(require('express').static('static'))
 
 router.get('/post', (req, res) => {
     res.render('feed/post')

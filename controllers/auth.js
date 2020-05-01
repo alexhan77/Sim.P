@@ -2,7 +2,7 @@
 let router = require('express').Router()
 let db = require('../models')
 let passport = require('../config/passportConfig')
-
+router.use(require('express').static('static'))
 // Routes 
 // GET /auth/login - this is a page that renders the login form
 router.get('/login', (req, res) => {

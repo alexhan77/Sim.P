@@ -3,6 +3,8 @@ let moment = require('moment')
 let adminLogin = require('../middleware/adminLogin')
 let userLogin = require('../middleware/userLogin')
 let db = require('../models')
+// Displays the logo on ur page (sets the starting point of source link of image)
+router.use(require('express').static('static'))
 
 // Custom middleware that is ONLY applied to the routes in this file!
 router.use(userLogin)
